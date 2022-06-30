@@ -1,4 +1,4 @@
-[] Each album has 
+[x] Each album has 
     [] title
     [] artist
     [] created_at (when the object was created)
