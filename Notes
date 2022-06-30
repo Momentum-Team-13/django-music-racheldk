@@ -7,11 +7,17 @@
 
 [x] make extra albums (through admin)    
 
-[] see list of all albums on the homepage
+[x] see list of all albums on the homepage
     -like list_contacts
 
-[] create a new album (form)
+[x] create a new album (form)
     - like create contact 
+    [x] forms.py
+    [x] url
+    [x] view
+    [x] template
+    [x] button on list_albums
+    [x] showing up on page
 
 [] see a detail page for one existing album
     - like contact_detail
@@ -25,7 +31,7 @@
 [] minimal styling (can use the same as myTunes project, maybe use library like Bulma or Picnic)
 
 URLS TO HAVE
-[] '', GET, show list of all ablums
+[X] '', GET, show list of all ablums
     [x] url
     [] view
     [] template
