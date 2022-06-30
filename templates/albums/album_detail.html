@@ -7,7 +7,7 @@
 <div>Artist: {{ album.artist }}</div>
 <div>Album added to collection: {{ album.created_at }}</div>
 
-<div>edit button</div>
+<div><a href="{% url 'edit_album' pk=album.pk %}">Edit album</a></div>
 
 <div><a href="{% url 'list_albums' %}">Return to list</a></div>
 

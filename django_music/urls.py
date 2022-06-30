@@ -24,6 +24,7 @@ urlpatterns = [
     path('', albums_views.list_albums, name='list_albums'),
     path('/albums/new/', albums_views.new_album, name='new_album'), 
     path('albums/<int:pk>', albums_views.album_detail, name='album_detail'),
+    path('albums/<int:pk>/edit', albums_views.edit_album, name="edit_album"),
 ]
 
 

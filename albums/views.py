@@ -24,3 +24,16 @@ def new_album(request):
 def album_detail(request, pk):
     album = get_object_or_404(Album, pk=pk)
     return render(request, "albums/album_detail.html", {"album": album})
+
+
+def edit_album(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    if request.method == 'GET':
+        form = AlbumForm(instance=album)
+    else: 
+        form = AlbumForm(data=request.POST, instance=album)
+        if form.is_valid():
+            form.save()
+            return redirect(to='list_albums')
+
+    return render(request, "albums/edit_album.html", {"form": form, "album": album})                

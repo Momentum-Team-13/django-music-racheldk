@@ -19,17 +19,22 @@
     [x] button on list_albums
     [x] showing up on page
 
-[] see a detail page for one existing album
+[x] see a detail page for one existing album
     - like contact_detail
     [x] url
     [x] view
     [x] template
-    [] make album title clickable link
+    [x] make album title clickable link
     [x] make back to list link
     [x] showing up on page
 
-[] edit an existing album
+[X] edit an existing album
     - like edit contact button 
+    [] url
+    [] view
+    [] template
+    [] clickable link on album detail page
+    [] link also on main page?
 
 [] delete an existing album 
     - like delete contact button 
@@ -40,9 +45,9 @@ URLS TO HAVE
 [X] '', GET, show list of all ablums
 [x]/albums/new, GET, show form to create a new album
 [x]/albums/new POST create a new album
-[]/albums/<int:pk> GET, show details of single album
-[] /albums/<int:pk>/edit, GET, form to edit specific album
-[] /albums/<int:pk>/edit, POST, update specific album
+[x]/albums/<int:pk> GET, show details of single album
+[x] /albums/<int:pk>/edit, GET, form to edit specific album
+[x] /albums/<int:pk>/edit, POST, update specific album
 [] /albums/<int:pk>/delete, GET, confirmation screen to delete specific album
 [] /albums/<int:pk>/delete, POST, delete specific album
 
