@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_list_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 
 from .forms import AlbumForm
 from .models import Album
@@ -18,4 +18,9 @@ def new_album(request):
             form.save()
             return redirect(to='list_albums')   
 
-    return render(request, "albums/new_album.html", {'form':form})             
+    return render(request, "albums/new_album.html", {'form':form})   
+
+
+def album_detail(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    return render(request, "albums/album_detail.html", {"album": album})

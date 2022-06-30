@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% block content %} 
+<div>
+    <h2>{{ album.title }}</h2>
+</div>    
+
+<div>Artist: {{ album.artist }}</div>
+<div>Album added to collection: {{ album.created_at }}</div>
+
+<div>edit button</div>
+
+<div><a href="{% url 'list_albums' %}">Return to list</a></div>
+
+<div>delete button</div>
+
+{% endblock %} 

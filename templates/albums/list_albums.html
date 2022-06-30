@@ -5,10 +5,10 @@
 
 <p><a href="{% url 'new_album' %}">Add New Album</a></p>
 
-<div class="flex flex-wrap">
+<div>
     {% for album in albums %}
     <div>
-        <h2>Album: {{ album.title }}</h2>
+        <h2>Album: <a href="{% url 'album_detail' pk=album.pk%}">{{ album.title }}</a></h2>
     </div>    
 
     <div>Artist: {{ album.artist }}</div>
