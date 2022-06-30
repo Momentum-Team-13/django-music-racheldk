@@ -3,19 +3,64 @@
     [] artist
     [] created_at (when the object was created)
 
+[x] make extra albums (through admin)    
+
 [] see list of all albums on the homepage
     -like list_contacts
 
-[] create a new album
+[] create a new album (form)
+    - like create contact 
 
 [] see a detail page for one existing album
+    - like contact_detail
 
 [] edit an existing album
+    - like edit contact button 
 
 [] delete an existing album 
+    - like delete contact button 
 
-[] minimal styling (can use the same as myTunes project)
+[] minimal styling (can use the same as myTunes project, maybe use library like Bulma or Picnic)
+
+URLS TO HAVE
+[] '', GET, show list of all ablums
+    [x] url
+    [] view
+    [] template
+[]/albums/new, GET, show form to create a new album
+    [] url
+    [] view
+    [] template
+[]/albums/new POST create a new album
+    [] url
+    [] view
+    [] template
+[]/albums/<int:pk> GET, show details of single album
+    [] url
+    [] view
+    [] template
+[] /albums/<int:pk>/edit, GET, form to edit specific album
+    [] url
+    [] view
+    [] template
+[] /albums/<int:pk>/edit, POST, update specific album
+    [] url
+    [] view
+    [] template
+[] /albums/<int:pk>/delete, GET, confirmation screen to delete specific album
+    [] url
+    [] view
+    [] template
+[] /albums/<int:pk>/delete, POST, delete specific album
+    [] url
+    [] view
+    [] template
+
 
 THINGS TO REMEMBER:
 [] import things (see uptact for specifics)
     check all the pages 
+
+
+
+There are also spicy options later     
