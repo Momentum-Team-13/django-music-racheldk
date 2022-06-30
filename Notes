@@ -3,6 +3,8 @@
     [] artist
     [] created_at (when the object was created)
 
+[] fix time for created_at (not set in the right timezone?)
+
 [x] make extra albums (through admin)    
 
 [] see list of all albums on the homepage
