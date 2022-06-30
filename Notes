@@ -1,0 +1,21 @@
+[] Each album has 
+    [] title
+    [] artist
+    [] created_at (when the object was created)
+
+[] see list of all albums on the homepage
+    -like list_contacts
+
+[] create a new album
+
+[] see a detail page for one existing album
+
+[] edit an existing album
+
+[] delete an existing album 
+
+[] minimal styling (can use the same as myTunes project)
+
+THINGS TO REMEMBER:
+[] import things (see uptact for specifics)
+    check all the pages 
