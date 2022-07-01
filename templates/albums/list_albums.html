@@ -5,14 +5,23 @@
 
 <p><a href="{% url 'new_album' %}">Add New Album</a></p>
 
-<div>
+<div class="box" >
     {% for album in albums %}
-    <div>
-        <h2>Album: <a href="{% url 'album_detail' pk=album.pk%}">{{ album.title }}</a></h2>
-    </div>    
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-header-title">Album: <a href="{% url 'album_detail' pk=album.pk%}">{{ album.title }}</a></h2>
+        </div>    
 
-    <div>Artist: {{ album.artist }}</div>
-    <div>Album added to collection: {{ album.created_at }}</div>
+        <div class="card-content">
+            <p>Artist: {{ album.artist }}</p>
+            <p>Album added to collection: {{ album.created_at }}</p>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">Edit album</a>
+            <a href="{% url 'list_albums' %}" class="card-footer-item">Return to list</a>
+            <a href="{% url 'delete_album' pk=album.pk %}" class="card-footer-item">Delete album</a>
+        </div>
+    </div>
 
   {% endfor %}
 </div>  

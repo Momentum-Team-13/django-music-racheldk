@@ -1,10 +1,13 @@
+[] fix time for created_at (not set in the right timezone?)
+[] minimal styling (can use the same as myTunes project, maybe use library like Bulma or Picnic)
+
+?? edit and delete links also on main page?
+
+
 [x] Each album has 
     [] title
     [] artist
     [] created_at (when the object was created)
-
-[] fix time for created_at (not set in the right timezone?)
-
 [x] make extra albums (through admin)    
 
 [x] see list of all albums on the homepage
@@ -36,17 +39,14 @@
     [x] clickable link on album detail page
     [x] link also on main page?
 
-[] delete an existing album 
+[x] delete an existing album 
     - like delete contact button 
     [x] url
     [x] view
     [x] template
-    [] clickable link on album detail page
+    [x] clickable link on album detail page
     [] link also on main page? 
 
-[] minimal styling (can use the same as myTunes project, maybe use library like Bulma or Picnic)
-
-?? edit and delete links also on main page?
 
 URLS TO HAVE
 [X] '', GET, show list of all ablums
@@ -55,8 +55,8 @@ URLS TO HAVE
 [x]/albums/<int:pk> GET, show details of single album
 [x] /albums/<int:pk>/edit, GET, form to edit specific album
 [x] /albums/<int:pk>/edit, POST, update specific album
-[] /albums/<int:pk>/delete, GET, confirmation screen to delete specific album
-[] /albums/<int:pk>/delete, POST, delete specific album
+[x] /albums/<int:pk>/delete, GET, confirmation screen to delete specific album
+[x] /albums/<int:pk>/delete, POST, delete specific album
 
 
 THINGS TO REMEMBER:
