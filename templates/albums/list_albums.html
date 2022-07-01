@@ -11,7 +11,7 @@
     {% for album in albums %}
     <div class="card box has-background-whiter">
         <div class="card-header">
-            <h2 class="card-header-title"><a href="{% url 'album_detail' pk=album.pk%}">{{ album.title }}</a></h2>
+            <h2 class="card-header-title"><a href="{% url 'album_detail' pk=album.pk%}">{{ album }}</a></h2>
         </div>    
 
         <div class="card-content">
