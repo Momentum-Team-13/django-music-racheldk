@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "node-sass": "^7.0.1"
+  },
+  "name": "django-music-racheldk",
+  "description": "Create an application to keep track of all the music albums you own. You can choose whatever fields you think an album should have, but it should have at least these three:",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Momentum-Team-13/django-music-racheldk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Momentum-Team-13/django-music-racheldk/issues"
+  },
+  "homepage": "https://github.com/Momentum-Team-13/django-music-racheldk#readme"
+}

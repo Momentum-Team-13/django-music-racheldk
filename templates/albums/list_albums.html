@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="level">
-    <h1 class="level-item">All Albums</h1>
-    <div class="level-item"><a href="{% url 'new_album' %}" class="link">Add New Album</a></div>
+<div class="hero">
+    <div class="hero-body">
+        <h1 class="level-item is-size-1">All Albums</h1>
+        <div class="has-text-right"><a href="{% url 'new_album' %}" class="link">Add New Album</a></div>
+    </div>
 </div>
-<div class="section" >
+<div class="section has-background-grey-lighter" >
     {% for album in albums %}
-    <div class="card, box">
+    <div class="card box has-background-whiter">
         <div class="card-header">
             <h2 class="card-header-title"><a href="{% url 'album_detail' pk=album.pk%}">{{ album.title }}</a></h2>
         </div>    
@@ -19,7 +21,6 @@
         
         <div class="card-footer">
             <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">Edit album</a>
-            <a href="{% url 'list_albums' %}" class="card-footer-item">Return to list</a>
             <a href="{% url 'delete_album' pk=album.pk %}" class="card-footer-item">Delete album</a>
         </div>
     </div>
