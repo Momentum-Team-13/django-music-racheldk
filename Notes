@@ -30,16 +30,23 @@
 
 [X] edit an existing album
     - like edit contact button 
-    [] url
-    [] view
-    [] template
-    [] clickable link on album detail page
-    [] link also on main page?
+    [x] url
+    [x] view
+    [x] template
+    [x] clickable link on album detail page
+    [x] link also on main page?
 
 [] delete an existing album 
     - like delete contact button 
+    [x] url
+    [x] view
+    [x] template
+    [] clickable link on album detail page
+    [] link also on main page? 
 
 [] minimal styling (can use the same as myTunes project, maybe use library like Bulma or Picnic)
+
+?? edit and delete links also on main page?
 
 URLS TO HAVE
 [X] '', GET, show list of all ablums

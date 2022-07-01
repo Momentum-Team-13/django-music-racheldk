@@ -11,6 +11,6 @@
 
 <div><a href="{% url 'list_albums' %}">Return to list</a></div>
 
-<div>delete button</div>
+<div><a href="{% url 'delete_album' pk=album.pk %}">Delete album</a></div>
 
 {% endblock %} 
