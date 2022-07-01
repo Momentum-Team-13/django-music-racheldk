@@ -10,6 +10,13 @@
         <p>Added to collection: {{ album.created_at }}</p>
     </div>
 
+    <div>
+        <p>All albums by {{ album.artist }}:</p>
+        {% for album in album.artist.albums.all %} 
+            <p><a href="{% url 'album_detail' pk=album.pk %}">{{ album }}</a></p>
+        {% endfor %} 
+    </div>
+
     <div class="card-footer">
         <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">Edit album</a>
         <a href="{% url 'list_albums' %}" class="card-footer-item">Return to list</a>
