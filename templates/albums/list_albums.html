@@ -13,8 +13,11 @@
         <div class="card-header">
             <h2 class="card-header-title"><a href="{% url 'album_detail' pk=album.pk%}">{{ album }}</a></h2>
         </div>    
-
+        
         <div class="card-content">
+            {% if album.favorite == True %} 
+                <p>This album is a favorite</p>
+            {% endif %}     
             <p>Artist: {{ album.artist }}</p>
             <p>Album added to collection: {{ album.created_at }}</p>
         </div>
