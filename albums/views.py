@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
-from .forms import AlbumForm
+from .forms import AlbumForm, FavoriteForm
 from .models import Album
 
 
@@ -12,8 +12,10 @@ def list_albums(request):
 def new_album(request):
     if request.method == 'GET':
         form = AlbumForm()
+        fav_form = FavoriteForm()
     else:
         form = AlbumForm(data=request.POST)
+        fav_form = FavoriteForm(data=request.POST)
         if form.is_valid():
             form.save()
             return redirect(to='list_albums')   
@@ -48,3 +50,16 @@ def delete_album(request, pk):
         return redirect(to='list_albums')
 
     return render(request, "albums/delete_album.html", {"album": album})        
+
+
+def favorite(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    if request.method =='GET':
+        form = FavoriteForm()
+    else:    
+        form = FavoriteForm(data=request.POST, instance=album)
+        if form.is_valid():
+            form.save()
+            return redirect(to='list_albums')
+
+    return render(request, "albums/favorite.html", {"album": album, "pk": pk})

@@ -7,5 +7,12 @@ class AlbumForm(forms.ModelForm):
         fields = [
             'name', 
             'artist', 
+        ]
+
+
+class FavoriteForm(forms.ModelForm):
+    class Meta:
+        model=Album
+        fields = [
             'favorite',
         ]

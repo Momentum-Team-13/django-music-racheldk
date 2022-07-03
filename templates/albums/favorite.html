@@ -1,0 +1,12 @@
+{% extends "base.html" %}  
+{% block content %}  
+<div>
+    <form action="{% url 'favorite' pk=album.pk %}" method="POST">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <div>
+            <button type="submit">Update</button>
+        </div>
+</form>
+</div>
+{% endblock %}  
