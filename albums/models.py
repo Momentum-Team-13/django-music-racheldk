@@ -3,20 +3,10 @@ from django.utils import timezone
 
 # Create your models here.
 class Album(models.Model):
-    FAVORITE = 'Favorite'
-    NOT_FAVORITE = 'Not a favorite'
-    STATUS_CHOICES = [
-        (FAVORITE, 'Favorite'),
-        (NOT_FAVORITE, 'Not a favorite'),
-    ]
     name = models.CharField(max_length=200)
     artist = models.ForeignKey("Artist", on_delete=models.CASCADE, related_name="albums",)
     created_at = models.DateTimeField(auto_now_add=True)
-    favorite = models.CharField(
-        max_length=15,
-        choices=STATUS_CHOICES,
-        default=NOT_FAVORITE,  
-    )
+    favorite = models.BooleanField(default=False)
 
     def __str__(self): 
         return self.name
@@ -31,10 +21,3 @@ class Artist(models.Model):
 
     def __str__(self):
         return self.name
-
-
-# class Favorite(models.Model):
-#     status = models.CharField(max_length=20)
-
-#     def __str__(self):
-#         return self.status
