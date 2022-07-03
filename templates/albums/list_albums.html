@@ -12,12 +12,22 @@
     <div class="card box has-background-whiter">
         <div class="card-header">
             {% if album.favorite == True %} 
-                    <span class="icon has-text-warning">    
-                    <i class="fa-solid fa-star fa-lg"></i></span>
+                <span class="icon">    
+                    <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">
+                        <span class="icon has-text-warning">
+                        <i class="fa-solid fa-star fa-lg"></i>
+                        </span>
+                    </a>
+                </span>
                 {% else %} 
-                    <span class="icon has-text-grey">
-                    <i class="fa-regular fa-star fa-lg"></i></span>    
-                {% endif %}    
+                <span class="icon">
+                    <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">
+                        <span class="icon has-text-grey">    
+                            <i class="fa-regular fa-star fa-lg"></i>
+                        </span>
+                    </a> 
+                </span>          
+            {% endif %}    
             <h2 class="card-header-title"><a href="{% url 'album_detail' pk=album.pk%}">{{ album }}</a></h2>
         </div>    
         
@@ -33,13 +43,6 @@
     </div>
     {% endfor %}
 </div>  
-
-
-
-
-
-
-
 
 {% endblock %}
 
