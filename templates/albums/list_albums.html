@@ -11,11 +11,13 @@
     {% for album in albums %}
     <div class="card box has-background-whiter">
         <div class="card-header">
-            <span class="icon has-text-warning">
-                {% if album.favorite == True %} 
-                    <i class="fa-solid fa-star fa-lg"></i>
-                {% endif %} 
-            </span>    
+            {% if album.favorite == True %} 
+                    <span class="icon has-text-warning">    
+                    <i class="fa-solid fa-star fa-lg"></i></span>
+                {% else %} 
+                    <span class="icon has-text-grey">
+                    <i class="fa-regular fa-star fa-lg"></i></span>    
+                {% endif %}    
             <h2 class="card-header-title"><a href="{% url 'album_detail' pk=album.pk%}">{{ album }}</a></h2>
         </div>    
         
