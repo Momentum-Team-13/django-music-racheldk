@@ -6,7 +6,9 @@
     </div>    
 
     <div class="card-content">
-        <p>Artist: {{ album.artist }}</p>
+        <p><a href="{% url 'list_by_artist' pk=album.pk %}">
+            Artist: {{ album.artist }}</a>
+        </p>
         <p>Added to collection: {{ album.created_at }}</p>
     </div>
 
