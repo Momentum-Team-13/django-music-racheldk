@@ -11,7 +11,7 @@
     {% for album in albums %}
     <div class="card box has-background-whiter">
         <div class="card-header">
-            {% if album.favorite == True %} 
+            {% if album in favorite_albums %} 
                 <span class="icon">    
                     <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">
                         <span class="icon has-text-warning">

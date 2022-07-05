@@ -6,7 +6,9 @@ from .models import Album
 
 def list_albums(request):
     albums = Album.objects.all()
-    return render(request, "albums/list_albums.html", {"albums": albums})
+    favorite_albums = [album for album in albums if album.check_is_user_favorite(request.user)]
+        
+    return render(request, "albums/list_albums.html", {"albums": albums, "favorite_albums": favorite_albums})
 
 
 def new_album(request):
@@ -52,6 +54,5 @@ def delete_album(request, pk):
 
 def list_by_artist(request, pk):
     album = get_object_or_404(Album, pk=pk)
-    artist = album.artist
-    return render(request, 'albums/list_by_artist.html', {"album": album, "artist": artist})
+    return render(request, 'albums/list_by_artist.html', {"artist": album.artist})
     

@@ -2,12 +2,12 @@
 {% block content %} 
 <div class="section has-background-grey-lighter">
     <div class="card"> 
-        <p class="card-header-title">Albums by {{ album.artist }}</h1>
+        <p class="card-header-title">Albums by {{ artist }}</h1>
         <div class="card-content">    
-        {% for album in album.artist.albums.all %} 
+        {% for album in artist.albums.all %} 
         <div class="block"> {{ album }} </div>
         {% endfor %}
         </div>
-</div>
+    </div>
 </div>
 {% endblock %}  
