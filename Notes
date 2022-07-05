@@ -1,0 +1,68 @@
+[] fix time for created_at (not set in the right timezone?)
+[] minimal styling (can use the same as myTunes project, maybe use library like Bulma or Picnic)
+
+?? edit and delete links also on main page?
+
+
+[x] Each album has 
+    [] title
+    [] artist
+    [] created_at (when the object was created)
+[x] make extra albums (through admin)    
+
+[x] see list of all albums on the homepage
+    -like list_contacts
+
+[x] create a new album (form)
+    - like create contact 
+    [x] forms.py
+    [x] url
+    [x] view
+    [x] template
+    [x] button on list_albums
+    [x] showing up on page
+
+[x] see a detail page for one existing album
+    - like contact_detail
+    [x] url
+    [x] view
+    [x] template
+    [x] make album title clickable link
+    [x] make back to list link
+    [x] showing up on page
+
+[X] edit an existing album
+    - like edit contact button 
+    [x] url
+    [x] view
+    [x] template
+    [x] clickable link on album detail page
+    [x] link also on main page?
+
+[x] delete an existing album 
+    - like delete contact button 
+    [x] url
+    [x] view
+    [x] template
+    [x] clickable link on album detail page
+    [] link also on main page? 
+
+
+URLS TO HAVE
+[X] '', GET, show list of all ablums
+[x]/albums/new, GET, show form to create a new album
+[x]/albums/new POST create a new album
+[x]/albums/<int:pk> GET, show details of single album
+[x] /albums/<int:pk>/edit, GET, form to edit specific album
+[x] /albums/<int:pk>/edit, POST, update specific album
+[x] /albums/<int:pk>/delete, GET, confirmation screen to delete specific album
+[x] /albums/<int:pk>/delete, POST, delete specific album
+
+
+THINGS TO REMEMBER:
+[] import things (see uptact for specifics)
+    check all the pages 
+
+
+
+There are also spicy options later     

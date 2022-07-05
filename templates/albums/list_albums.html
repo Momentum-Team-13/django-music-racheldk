@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-body">
+        <h1 class="level-item is-size-1">All Albums</h1>
+        <div class="has-text-right"><a href="{% url 'new_album' %}" class="link">Add New Album</a></div>
+    </div>
+</div>
+<div class="section has-background-grey-lighter" >
+    {% for album in albums %}
+    <div class="card box has-background-whiter">
+        <div class="card-header">
+            {% if album.favorite == True %} 
+                <span class="icon">    
+                    <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">
+                        <span class="icon has-text-warning">
+                        <i class="fa-solid fa-star fa-lg"></i>
+                        </span>
+                    </a>
+                </span>
+                {% else %} 
+                <span class="icon">
+                    <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">
+                        <span class="icon has-text-grey">    
+                            <i class="fa-regular fa-star fa-lg"></i>
+                        </span>
+                    </a> 
+                </span>          
+            {% endif %}    
+            <h2 class="card-header-title"><a href="{% url 'album_detail' pk=album.pk%}">{{ album }}</a></h2>
+        </div>    
+        
+        <div class="card-content">
+            <p>Artist: {{ album.artist }}</p>
+            <p>Album added to collection: {{ album.created_at }}</p>
+        </div>
+        
+        <div class="card-footer">
+            <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">Edit album</a>
+            <a href="{% url 'delete_album' pk=album.pk %}" class="card-footer-item">Delete album</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>  
+
+{% endblock %}
+

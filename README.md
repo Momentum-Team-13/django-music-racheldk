@@ -41,7 +41,9 @@ Your app should have the following URLs. You'll need to define view functions to
 
 - Add an Artist model and create a foreign key on the Album model to associate the two.
   - Show the Artist and their other albums on the album detail page, with links to those album detail pages.
+  
 - Create an way to mark an album as a favorite. Favorited albums are displayed with a star next to them (how you choose to show this is up to you). A user should be able to click on the star, or a link or button, to mark the album as a favorite.
+
 - Show a list of all the albums by a particular artist if a user clicks on an artist's name.
 
 ## Getting up and running
