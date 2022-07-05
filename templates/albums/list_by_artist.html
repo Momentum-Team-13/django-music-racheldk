@@ -1,7 +1,13 @@
 {% extends 'base.html' %}  
 {% block content %} 
-<h1>Albums by {{ album.artist }}</h1>
-{% for album in album.artist.albums.all %} 
-<p> {{ album }} </p>
-{% endfor %}
+<div class="section has-background-grey-lighter">
+    <div class="card"> 
+        <p class="card-header-title">Albums by {{ album.artist }}</h1>
+        <div class="card-content">    
+        {% for album in album.artist.albums.all %} 
+        <div class="block"> {{ album }} </div>
+        {% endfor %}
+        </div>
+</div>
+</div>
 {% endblock %}  
