@@ -5,7 +5,7 @@
         <p class="card-header-title">Albums by {{ artist }}</h1>
         <div class="card-content">    
         {% for album in artist.albums.all %} 
-        <div class="block"> {{ album }} </div>
+        <div class="block"> <a href="{% url 'album_detail' pk=album.pk %}"> {{ album }}</a> </div>
         {% endfor %}
         </div>
     </div>

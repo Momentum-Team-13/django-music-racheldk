@@ -1,7 +1,12 @@
-[] fix time for created_at (not set in the right timezone?)
-[] minimal styling (can use the same as myTunes project, maybe use library like Bulma or Picnic)
+[] change list_by_artist to artist_detail?
 
-?? edit and delete links also on main page?
+
+
+[x] list_by_artist: make album titles clickable to album_detail pages 
+[x] fix time for created_at (not set in the right timezone?)
+[x] minimal styling (can use the same as myTunes project, maybe use library like Bulma or Picnic)
+
+[x] edit and delete links also on main page?
 
 
 [x] Each album has 
