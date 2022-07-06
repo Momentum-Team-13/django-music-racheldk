@@ -7,13 +7,20 @@
     </div>    
     
     <div class="card-content">
-        <p><a href="{% url 'list_by_artist' pk=album.pk %}">
-            Artist:</a></p>  
+        <p><a href="{% url 'list_by_artist' pk=album.pk %}"></a></p>  
+        <p>Artist: 
+            {% for artist in album.artist.all %}
+
+            <!-- <a href="{% url 'list_by_artist' pk=album.pk %}">     -->
+            {{ artist }}
+            <!-- </a> -->
+            {% endfor %}
+        </p>
         <p>Added to collection: {{ album.created_at }}</p>
     </div>
     
     <div class="card-content">
-        <p>All albums by {{ artist }}:</p>
+        <!-- <p>All albums by {{ artist }}:</p> -->
         {% for album in album.artist.albums.all %} 
         <p><a href="{% url 'album_detail' pk=album.pk %}">{{ album }}</a></p>
         {% endfor %} 
