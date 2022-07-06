@@ -9,11 +9,11 @@
     <div class="card-content">
         <p><a href="{% url 'list_by_artist' pk=album.pk %}"></a></p>  
         <p>Artist: 
-            {% for artist in album.artist.all %}
+            {% for artist in album.artists.all %}
 
-            <!-- <a href="{% url 'list_by_artist' pk=album.pk %}">     -->
+            <a href="{% url 'list_by_artist' pk=artist.pk %}">    
             {{ artist }}
-            <!-- </a> -->
+            </a>
             {% endfor %}
         </p>
         <p>Added to collection: {{ album.created_at }}</p>

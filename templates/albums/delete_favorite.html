@@ -3,14 +3,14 @@
 {% block content %} 
 <div class="section has-background-grey-lighter">
     <div class="card">
-        <h1 class="card-header-title">Delete Album</h1>
+        <h1 class="card-header-title">Delete Favorite</h1>
 
         <div class="card-content">
-            <form action="{% url 'delete_album' pk=album.pk %}" method="POST">
+            <form action="{% url 'delete_favorite' pk=album.pk %}" method="POST">
                 {% csrf_token %} 
-                <p>Are you sure you want to delete "{{ album }}"?</p>
+                <p>Are you sure you want to remove "{{ album }}" from favorites?</p>
                 <div class="card-content">
-                    <button type="submit">Yes, delete album</button><br />
+                    <button type="submit">Yes, delete favorite</button><br />
                     <a href="{% url 'album_detail' pk=album.pk %}">Cancel</a>
                 </div>
             </form>
