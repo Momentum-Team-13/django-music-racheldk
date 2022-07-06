@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 class Album(models.Model):
     name = models.CharField(max_length=200)
-    artist = models.ManyToManyField("Artist", related_name="albums")
+    artists = models.ManyToManyField("Artist", related_name="albums")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self): 

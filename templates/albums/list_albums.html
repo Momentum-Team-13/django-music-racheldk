@@ -32,12 +32,12 @@
         </div>    
         
         <div class="card-content">
-            <p>Artist: 
-                {% for artist in album.artist.all %}
-
-                <!-- <a href="{% url 'list_by_artist' pk=album.pk %}">     -->
-                {{ artist }}
-                <!-- </a> -->
+            <p>Artist 
+                {% for artist in album.artists.all %}
+                |  
+                <a href="{% url 'list_by_artist' pk=artist.pk %}">    
+                    {{ artist }}     
+                </a>
                 {% endfor %}
             </p>
             <p>Album added to collection: {{ album.created_at }}</p>

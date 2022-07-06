@@ -53,8 +53,8 @@ def delete_album(request, pk):
 
 
 def list_by_artist(request, pk):
-    album = get_object_or_404(Album, pk=pk)
-    return render(request, 'albums/list_by_artist.html', {"artist": album.artist})
+    artist = get_object_or_404(Artist, pk=pk)
+    return render(request, 'albums/list_by_artist.html', {"artist": artist})
     
 
 def favorite(request, pk):
