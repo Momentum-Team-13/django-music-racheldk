@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 class Album(models.Model):
     name = models.CharField(max_length=200)
-    artist = models.ForeignKey("Artist", on_delete=models.CASCADE, related_name="albums",)
+    artist = models.ManyToManyField("Artist", related_name="albums")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self): 
@@ -36,3 +36,6 @@ class Favorite(models.Model):
     user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='favorites', null=True, blank=True)
     album = models.ForeignKey('Album', on_delete=models.CASCADE, related_name='favorites', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.user}: {self.album}'
