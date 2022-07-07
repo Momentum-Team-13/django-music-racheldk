@@ -59,14 +59,18 @@ def list_by_artist(request, pk):
 
 def add_favorite(request, pk):
     album = get_object_or_404(Album, pk=pk)
-    if request.method == "GET":
-        form = FavoriteForm
-    else: 
-        form = FavoriteForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect(to='list_albums')
-    return render(request, "albums/add_favorite.html", {"form": form, "album": album})      
+    favorite = Favorite.objects.create(album=album, user=request.user)
+    favorite.save()
+    return redirect(to="list_albums")
+
+    # if request.method == "GET":
+    #     form = FavoriteForm
+    # else: 
+    #     form = FavoriteForm(data=request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect(to='list_albums')
+    # return render(request, "albums/add_favorite.html", {"form": form, "album": album})      
 
 
 def delete_favorite(request, pk):
